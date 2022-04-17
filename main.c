@@ -145,9 +145,24 @@ int SomaElementosVetorRecursivo(int vet[], int tam){
     }
     
 }
-
 //_____________________________________________________________________________
 
+
+//------------------ MAIOR ELEMENTO DE UM VETOR COM RECURSÃO -------------------
+int MaiorElementoVetorRecursivo(int vet[], int tam, int indice){
+    if(tam == 0){
+        return vet[indice];
+    }
+    else{
+        if(vet[tam - 1] > vet[indice]){
+            return MaiorElementoVetorRecursivo(vet, tam - 1, tam - 1);
+        }
+        else{
+            return MaiorElementoVetorRecursivo(vet, tam - 1, indice);
+        }
+    }
+}
+//____________________________________________________________________________
 
 int main(void) {
 
@@ -270,11 +285,20 @@ int main(void) {
 
 
     //------------- CALCULAR SOMA DOS ELEMENTOS DE UM VETOR RECURSIVO -------------
+    /*
     int vet[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     printf("Soma do vetor: %d", SomaElementosVetorRecursivo(vet, 10));  
+    */
 //_________________________________________________________________________________
     
-    
+
+
+    //------------------ MAIOR ELEMENTO DE UM VETOR COM RECURSÃO -------------------
+    int vet[10] = {25, 20, 85, 120, 550, 112, 15, 9, 15, 111};
+
+    printf("Maior: %d\n", MaiorElementoVetorRecursivo(vet, 10, 0));
+//__________________________________________________________________________________
+
   return 0;
 }
