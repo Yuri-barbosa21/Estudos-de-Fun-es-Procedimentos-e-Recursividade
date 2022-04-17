@@ -76,6 +76,21 @@ int SomarColunaMatriz(int matriz[5][5], int coluna){
     
     return soma;
 }
+//____________________________________________________________________________
+
+
+
+void ImprimirRecursivo(int x){
+    if(x == 0){
+        printf("%d ", x);
+    }
+    else{
+        printf("%d ", x);
+        ImprimirRecursivo(x - 1);
+    }
+}
+
+
 
 
 int main(void) {
@@ -114,6 +129,7 @@ int main(void) {
 
 
     //-------- FUNÇÃO QUE RETORNA A SOMA DE UMA LINHA E COLUNA DA MATRIZ ---------
+    /*
     int mat[5][5];
     int i, j;
 
@@ -136,6 +152,20 @@ int main(void) {
     for(i = 0; i < tam; i++){
         printf("Soma da linha %d: %d\n", i,  SomarColunaMatriz(mat, i));
     }
+    */
+//__________________________________________________________________________
+
+
+    
+    //-------------------- FUNÇÕES E PROCEDIMENTOS RECURSIVOS ------------------
+    
+    int n;
+
+    printf("Digite um valor maior que zero: ");
+    scanf("%d", &n);
+
+    ImprimirRecursivo(n);
+
     
   return 0;
 }
