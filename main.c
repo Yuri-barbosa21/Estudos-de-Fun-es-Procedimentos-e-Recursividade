@@ -79,7 +79,7 @@ int SomarColunaMatriz(int matriz[5][5], int coluna){
 //____________________________________________________________________________
 
 
-
+//-------------------- FUNÇÕES E PROCEDIMENTOS RECURSIVOS ------------------
 void ImprimirRecursivo(int x){
     if(x == 0){
         printf("%d ", x);
@@ -89,8 +89,21 @@ void ImprimirRecursivo(int x){
         ImprimirRecursivo(x - 1);
     }
 }
+//____________________________________________________________________________
 
 
+
+//--------------------------- FATORIAL RECURSIVO -----------------------------
+int FatorialRecursivo(int fat){
+    if(fat == 0 || fat == 1){
+        return 1;
+    }else{
+        return fat * FatorialRecursivo(fat - 1);
+    }
+    
+    return 0;
+}
+//____________________________________________________________________________
 
 
 int main(void) {
@@ -158,14 +171,25 @@ int main(void) {
 
     
     //-------------------- FUNÇÕES E PROCEDIMENTOS RECURSIVOS ------------------
-    
+    /*
     int n;
 
     printf("Digite um valor maior que zero: ");
     scanf("%d", &n);
 
     ImprimirRecursivo(n);
+    */
+//_______________________________________________________________________________ 
 
+
+
+    //--------------------------- FATORIAL RECURSIVO -----------------------------
+    int n;
+
+    printf("Digite um valor maior que zero: ");
+    scanf("%d", &n);
+
+    printf("%d", FatorialRecursivo(n));
     
   return 0;
 }
