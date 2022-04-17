@@ -106,6 +106,21 @@ int FatorialRecursivo(int fat){
 //____________________________________________________________________________
 
 
+
+//--------------------- CALCULAR POTENCIA RECURSIVO ---------------------
+int PotenciaRecursivo(int n, int e){
+    if(e == 0){
+        return 1;
+    }
+    else{
+        return (n * PotenciaRecursivo(n, e - 1));
+    }
+}
+//______________________________________________________________________________
+
+
+
+
 int main(void) {
 
   //--------------- FUNÇÃO QUE RETONRNA O TAMANHO DE UMA STRING --------------
@@ -184,12 +199,31 @@ int main(void) {
 
 
     //--------------------------- FATORIAL RECURSIVO -----------------------------
+    /*
     int n;
 
     printf("Digite um valor maior que zero: ");
     scanf("%d", &n);
 
     printf("%d", FatorialRecursivo(n));
+    */
+//________________________________________________________________________________
+
+
+    
+    //------------------------- CALCULAR POTENCIA RECURSIVO -------------------------
+    int n, e;
+
+    printf("Vamos calcular pontencia com recursão\n\n");
+    printf("Digite o numerador: ");
+    scanf("%d", &n);
+    printf("\nDigite o expoente: ");
+    scanf("%d", &e);
+
+    printf("\nResultado: %d", PotenciaRecursivo(n, e));
+//___________________________________________________________________________________
+
+
     
   return 0;
 }
