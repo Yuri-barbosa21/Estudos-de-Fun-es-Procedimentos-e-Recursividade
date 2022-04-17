@@ -120,6 +120,19 @@ int PotenciaRecursivo(int n, int e){
 
 
 
+//------------------------- SOMATÓRIA DE 1 ATÉ N --------------------------
+int SomatoriaRecursivo(int n){
+    if(n == 0){
+        return 0;
+    }
+    else{
+        return n + SomatoriaRecursivo(n - 1);
+    }
+    
+    return 0;
+}
+//_____________________________________________________________________________
+
 
 int main(void) {
 
@@ -212,6 +225,7 @@ int main(void) {
 
     
     //------------------------- CALCULAR POTENCIA RECURSIVO -------------------------
+    /*
     int n, e;
 
     printf("Vamos calcular pontencia com recursão\n\n");
@@ -221,9 +235,22 @@ int main(void) {
     scanf("%d", &e);
 
     printf("\nResultado: %d", PotenciaRecursivo(n, e));
+    */
 //___________________________________________________________________________________
 
 
+
+    //------------------------- SOMATÓRIA DE 1 ATÉ N --------------------------
+    
+    int n;
+
+    printf("Vamos calcular a somatória de 1 até N\n\n");
+    printf("Digite um N: ");
+    scanf("%d", &n);
+
+    printf("Resultado: %d", SomatoriaRecursivo(n));
+    
+//__________________________________________________________________________________
     
   return 0;
 }
