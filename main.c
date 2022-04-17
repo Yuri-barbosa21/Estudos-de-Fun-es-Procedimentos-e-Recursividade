@@ -134,6 +134,21 @@ int SomatoriaRecursivo(int n){
 //_____________________________________________________________________________
 
 
+
+//------------- CALCULAR SOMA DOS ELEMENTOS DE UM VETOR RECURSIVO -------------
+int SomaElementosVetorRecursivo(int vet[], int tam){
+    if(tam == 0){
+        return 0;
+    }
+    else{
+        return vet[tam - 1] + SomaElementosVetorRecursivo(vet, tam - 1);
+    }
+    
+}
+
+//_____________________________________________________________________________
+
+
 int main(void) {
 
   //--------------- FUNÇÃO QUE RETONRNA O TAMANHO DE UMA STRING --------------
@@ -241,16 +256,25 @@ int main(void) {
 
 
     //------------------------- SOMATÓRIA DE 1 ATÉ N --------------------------
-    
+    /*
     int n;
 
     printf("Vamos calcular a somatória de 1 até N\n\n");
-    printf("Digite um N: ");
+    printf("Digite N: ");
     scanf("%d", &n);
 
     printf("Resultado: %d", SomatoriaRecursivo(n));
-    
+    */
 //__________________________________________________________________________________
+
+
+
+    //------------- CALCULAR SOMA DOS ELEMENTOS DE UM VETOR RECURSIVO -------------
+    int vet[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    printf("Soma do vetor: %d", SomaElementosVetorRecursivo(vet, 10));  
+//_________________________________________________________________________________
+    
     
   return 0;
 }
