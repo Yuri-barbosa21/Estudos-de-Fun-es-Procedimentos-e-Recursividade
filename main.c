@@ -33,6 +33,14 @@ void MinhaStrlen2(char str[]){
 
 
 
+//----------- VARIAVEIS GLOBAIS, LOCAIS E ESCOPO DE VARIAVEIS -----------
+int idade2 = 35; // -> Variavel global
+void Imprimir(int id){
+    id++;
+    idade2++;
+}
+//__________________________________________________________________________
+
 
 int main(void) {
 
@@ -52,11 +60,24 @@ int main(void) {
 
     MinhaStrlen2(palavra);
     */
-    //__________________________________________________________________________
-    
-    
-    
+//___________________________________________________________________________
 
+
+    
+    //----------- VARIAVEIS GLOBAIS, LOCAIS E ESCOPO DE VARIAVEIS -----------
+    /*
+    int idade = 25;
+    
+    printf("\nIdade: %d", idade);
+    printf("\nIdade2: %d", idade2);
+    Imprimir(idade); // Envida apenas o valor da variavel
+    printf("\nIdade: %d", idade);
+    printf("\nIdade2: %d", idade2);
+    */
+//___________________________________________________________________________
+
+
+    
     
   return 0;
 }
